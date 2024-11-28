@@ -31,14 +31,41 @@ The **Calculator Application** is a robust and efficient software program writte
   - `Calculator_VOIDGetNumberBefore`: Extracts the operand before the operator.
   - `Calculator_VOIDGetNumberAfter`: Extracts the operand after the operator.
   - `Calculator_U8OperationsOrder`: Determines the precedence and order of operations in the expression.
+## Hardware Components
+- **Microcontroller**: ATmega32
+- **Input**: 4x4 Keypad
+- **Output**: 16x2 LCD Display
 
-## Usage
+## Software Details
+- **Development Environment**: Eclipse IDE
+- **Programming Language**: C
+- **Libraries Used**:
+  - Custom Hardware Abstraction Layer (HAL) for LCD and Keypad.
+  - Standard Types Library for data type definitions.
 
-1. **Input a Mathematical Expression:**
-   - Example: `12+34-5*6=`
-2. **View Results on the LCD:**
-   - If valid, the result is displayed.
-   - For invalid expressions, error messages like `SYNTAX ERROR!` or `MATH ERROR!` are shown.
+## System Overview
+### Modules
+1. **Keypad Interface**: Captures user input.
+2. **LCD Interface**: Displays input and results.
+3. **Calculator Core**:
+    - Validates expressions.
+    - Determines operation precedence.
+    - Performs calculations.
+
+### Workflow
+1. User enters a mathematical expression via the keypad.
+2. The system validates the input for errors.
+3. If the input is valid, the calculation module processes the expression.
+4. The result is displayed on the LCD.
+
+## How to Use
+1. Power on the system.
+2. Enter a mathematical expression using the keypad.
+3. Press the '=' button to display the result.
+4. If an error occurs, the system will display an appropriate message:
+   - **SYNTAX ERROR!** for invalid input.
+   - **MATH ERROR!** for operations like division by zero.
+
 
 ## Examples
 
